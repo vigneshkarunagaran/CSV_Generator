@@ -2,7 +2,7 @@
 
 This Python script generates a CSV file with customizable columns, datatypes, and duplicate control.
 
-## 🔧 Features
+## Features
 
 - Supports column types:
   - `int`, `float`, `str`, `date`
@@ -10,10 +10,3 @@ This Python script generates a CSV file with customizable columns, datatypes, an
 - Option to allow or disallow duplicates per column
 - Fully customizable schema
 - Outputs a CSV with random but realistic data
-
-## 📦 Requirements
-
-Install required packages:
-
-```bash
-pip install -r requirements.txt
