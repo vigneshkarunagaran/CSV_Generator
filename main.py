@@ -90,11 +90,16 @@ def generate_csv(schema, num_rows, output_file):
 
 # Example usage
 if __name__ == "__main__":
+    number_of_csv_files = 10
+    output_folder = "Dumps"
     schema = [
         {"name": "id", "type": "int", "allow_duplicates": False},
         {"name": "name", "type": ["Alice", "Bob", "Charlie"], "allow_duplicates": True},
         {"name": "score", "type": "float", "allow_duplicates": True},
         {"name": "dob", "type": "date", "allow_duplicates": True},
     ]
-
-    generate_csv(schema, num_rows=100, output_file="output.csv")
+    if not os.path.exsist(output_folder):
+        os.makedirs(output_folder)
+    
+    for i in range(1, number_of_csv_files + 1 ):
+        generate_csv(schema, num_rows=100, output_file= os.path.join(output_folder, f"data{i}.csv"))
