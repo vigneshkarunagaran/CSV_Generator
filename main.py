@@ -160,3 +160,11 @@ class CSVGeneratorUI:
         messagebox.showinfo("Success", f"Generated {self.num_files.get()} CSV file(s).")
 
 
+
+# -----------------------------
+# Run App
+# -----------------------------
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CSVGeneratorUI(root)
+    root.mainloop()
